@@ -24,6 +24,5 @@ Route::get('/items', [ItemController::class, 'index'])->name('item.index');
 Route::prefix('/item')->group(function () {
     Route::post('/store', [ItemController::class, 'store'])->name('item.store');
     Route::put('/{id}', [ItemController::class, 'update'])->name('item.update');
-    // Route::get('/lists/{id}', [ItemController::class, 'show'])->name('item.show');
     Route::delete('/{id}', [ItemController::class, 'destroy'])->name('item.destroy');
 });
